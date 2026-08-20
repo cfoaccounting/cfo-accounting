@@ -402,3 +402,183 @@ footer{padding-top:58px!important;}
   color:#6f7887;
   font-weight:500;
 }
+
+
+/* ==========================================================================\n   FINAL UI/UX POLISH — 20 AUG 2026\n   Breadcrumbs, compact heroes, 3:2 underpage imagery, FAQ reading width,\n   three-column advisory layout, clearer icons and contact-page location removal.\n   ========================================================================== */
+
+/* Breadcrumbs: restrained, readable and consistent on every underpage. */
+.breadcrumb-strip,
+.breadcrumb,
+.breadcrumb-bar{
+  padding:14px 0!important;
+  border-bottom:1px solid #e8ebef!important;
+  background:linear-gradient(180deg,#fff 0%,#fbfcfd 100%)!important;
+}
+.breadcrumb-strip .wrap,
+.breadcrumb .wrap,
+.breadcrumb-bar .wrap{
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  flex-wrap:wrap!important;
+  min-height:22px;
+  font-size:13px!important;
+  line-height:1.45!important;
+  color:#7b8491!important;
+}
+.breadcrumb-strip a,
+.breadcrumb a,
+.breadcrumb-bar a{
+  color:#667180!important;
+  font-weight:500!important;
+  text-decoration:none!important;
+}
+.breadcrumb-strip a:hover,
+.breadcrumb a:hover,
+.breadcrumb-bar a:hover{color:var(--brand-gold)!important;}
+.breadcrumb-strip .sep,
+.breadcrumb .sep,
+.breadcrumb-bar .sep{color:#b1b8c1!important;margin:0 1px!important;}
+.breadcrumb-strip .current,
+.breadcrumb .current,
+.breadcrumb-bar .current{
+  color:var(--ink)!important;
+  font-weight:600!important;
+  max-width:760px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* Desktop hero copy should feel deliberate instead of stretching across the page. */
+@media(min-width:901px){
+  .hero:not(.home-hero) h1,
+  .service-hero h1,
+  .services-hero h1{max-width:680px!important;}
+  .hero-compact h1,
+  .faq-hero h1,
+  .legal-hero h1{max-width:780px!important;margin-left:auto!important;margin-right:auto!important;}
+  .hero-compact .body-lg,
+  .faq-hero .body-lg{max-width:720px!important;margin-left:auto!important;margin-right:auto!important;}
+}
+
+/* More compact hero rhythm across underpages. */
+.hero:not(.home-hero){padding:58px 0 64px!important;}
+.service-hero,
+.services-hero{padding:58px 0 64px!important;}
+.hero-compact,
+.faq-hero{padding:52px 0 58px!important;}
+.legal-hero{padding:44px 0 40px!important;}
+
+/* Every underpage split hero image uses a clean 3:2 editorial ratio. */
+.hero:not(.home-hero) .hero-visual,
+.service-hero-img,
+.services-hero-img{max-width:560px!important;width:100%!important;margin-left:auto!important;}
+.hero:not(.home-hero) .hero-visual img,
+.service-hero-img img,
+.services-hero-img img{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:3/2!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:22px!important;
+}
+
+/* Home hero stays portrait, but with less empty vertical space. */
+.home-hero{padding:72px 0 68px!important;}
+
+/* Dark navy badges need high-contrast white icons. */
+.card .icon-badge,
+.info-card .icon-badge{
+  background:var(--navy)!important;
+}
+.card .icon-badge svg,
+.info-card .icon-badge svg{
+  color:#fff!important;
+  stroke:#fff!important;
+}
+
+/* FAQ: readable measure rather than full-container accordions. */
+.faq-hero .section-head{max-width:800px!important;}
+.faq-pills{max-width:900px!important;margin-left:auto!important;margin-right:auto!important;}
+.faq-category,
+.faq-no-results{max-width:820px!important;margin-left:auto!important;margin-right:auto!important;}
+.faq-category{margin-bottom:54px!important;}
+.accordion{gap:14px!important;}
+.accordion-item{border-radius:16px!important;}
+.accordion-header{padding:20px 22px!important;}
+.accordion-body-inner{padding:0 22px 20px!important;}
+
+/* Services advisory cards: three balanced columns on desktop. */
+@media(min-width:901px){
+  .feature-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:24px!important;
+    align-items:stretch!important;
+  }
+  .feature-card{height:100%!important;}
+  .feature-card>img{aspect-ratio:3/2!important;height:auto!important;}
+  .feature-card-body{padding:26px!important;}
+}
+
+/* Contact page: three factual contact cards, no invented location. */
+.info-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+.contact-support-card{
+  background:linear-gradient(145deg,#0b1e3d 0%,#132b51 100%);
+  color:#fff;
+  border-radius:22px;
+  padding:34px;
+  box-shadow:0 20px 46px rgba(11,30,61,.16);
+}
+.contact-support-card .eyebrow{background:rgba(255,255,255,.1)!important;color:#f4c572!important;}
+.contact-support-card h3{color:#fff!important;margin:18px 0 10px!important;}
+.contact-support-card>p{color:rgba(255,255,255,.76)!important;margin-bottom:22px!important;}
+.contact-next-list{display:grid;gap:14px;margin:0;padding:0;list-style:none;}
+.contact-next-list li{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.9);font-size:14px;line-height:1.55;}
+.contact-next-list svg{width:18px;height:18px;flex:0 0 auto;margin-top:2px;color:#fff;stroke:#fff;}
+.side-col{gap:20px!important;}
+
+/* Blog review line belongs to the content grid, not the viewport edge. */
+.editorial-review{
+  width:min(calc(100% - 80px),1300px)!important;
+  margin:20px auto 0!important;
+  padding:16px 0 0!important;
+  border-top:1px solid #e3e7ec;
+  font-size:13px!important;
+  line-height:1.5!important;
+  color:#667180!important;
+}
+
+@media(max-width:900px){
+  .hero:not(.home-hero),
+  .service-hero,
+  .services-hero,
+  .hero-compact,
+  .faq-hero{padding:34px 0 50px!important;}
+  .home-hero{padding:28px 0 50px!important;}
+
+  .hero:not(.home-hero) .hero-visual,
+  .service-hero-img,
+  .services-hero-img{order:1!important;max-width:none!important;margin:0!important;}
+  .hero:not(.home-hero) .hero-visual img,
+  .service-hero-img img,
+  .services-hero-img img{aspect-ratio:3/2!important;border-radius:18px!important;}
+
+  .info-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .editorial-review{width:calc(100% - 30px)!important;}
+}
+
+@media(max-width:600px){
+  .breadcrumb-strip,
+  .breadcrumb,
+  .breadcrumb-bar{padding:11px 0!important;}
+  .breadcrumb-strip .current,
+  .breadcrumb .current,
+  .breadcrumb-bar .current{max-width:calc(100vw - 105px);}
+  .info-grid{grid-template-columns:1fr!important;}
+  .contact-support-card{padding:26px 22px;}
+  .faq-category,.faq-no-results{max-width:none!important;}
+  .accordion-header{padding:18px!important;font-size:15px!important;}
+  .accordion-body-inner{padding:0 18px 18px!important;font-size:15px!important;}
+}

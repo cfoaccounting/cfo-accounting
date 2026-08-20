@@ -40,3 +40,17 @@ Current result: 30 pages, 2,297 internal links checked, 123 hash links checked, 
 - Added `CONTACT_REPLY_TO_EMAIL` configuration and kept API credentials entirely server-side.
 - Updated the Privacy Policy to transparently mention Vercel/Resend in the website-enquiry delivery flow.
 - Added `RESEND-FORMS-SETUP.md` with Vercel environment variable and testing instructions.
+
+
+## Final UI/UX polish
+- Reworked breadcrumbs across underpages for a cleaner, more consistent desktop/mobile appearance.
+- Replaced the Thank You page logo crop with a relevant consultation image.
+- Reduced hero top/bottom spacing across underpages and on the homepage.
+- Standardised underpage hero imagery to 3:2 and constrained desktop hero copy width.
+- Narrowed FAQ accordions to a comfortable reading width.
+- Changed the Services advisory section to 3 columns on desktop.
+- Replaced duplicated Growth & Funding imagery with distinct relevant visuals.
+- Changed navy icon badges to white icons for stronger contrast.
+- Removed the contact-page map and all unsupported physical-location claims, including transactional email footers and Privacy Policy wording.
+- Replaced the map with a useful “What happens next” reassurance panel.
+- Brought editorial review text inside the page content width on article pages.

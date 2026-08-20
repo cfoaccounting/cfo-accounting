@@ -138,7 +138,7 @@ function emailShell(content, previewText) {
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e5e7eb;">
       <tr><td style="background:#0d2344;padding:22px 28px;"><div style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:-.02em;">CFO Accounting</div></td></tr>
       <tr><td style="padding:30px 28px;">${content}</td></tr>
-      <tr><td style="padding:18px 28px;background:#f8fafc;border-top:1px solid #e5e7eb;color:#6b7280;font-size:12px;line-height:1.6;">CFO Accounting · London, United Kingdom<br><a href="https://www.cfoaccounting.co.uk" style="color:#0d2344;">www.cfoaccounting.co.uk</a> · <a href="mailto:consult@cfoaccounting.co.uk" style="color:#0d2344;">consult@cfoaccounting.co.uk</a></td></tr>
+      <tr><td style="padding:18px 28px;background:#f8fafc;border-top:1px solid #e5e7eb;color:#6b7280;font-size:12px;line-height:1.6;">CFO Accounting<br><a href="https://www.cfoaccounting.co.uk" style="color:#0d2344;">www.cfoaccounting.co.uk</a> · <a href="mailto:consult@cfoaccounting.co.uk" style="color:#0d2344;">consult@cfoaccounting.co.uk</a></td></tr>
     </table>
   </td></tr></table>
 </body></html>`;
