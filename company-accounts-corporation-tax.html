@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0B1E3D" name="theme-color"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<title>Limited Company Accounts &amp; Corporation Tax UK | CFO Accounting</title>
+<meta content="Annual accounts and Corporation Tax support for UK limited companies. Keep Companies House and HMRC filings accurate, on time and easier to understand." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://www.cfoaccounting.co.uk/company-accounts-corporation-tax" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="CFO Accounting" property="og:site_name"/>
+<meta content="Limited Company Accounts &amp; Corporation Tax UK | CFO Accounting" property="og:title"/>
+<meta content="Annual accounts and Corporation Tax support for UK limited companies. Keep Companies House and HMRC filings accurate, on time and easier to understand." property="og:description"/>
+<meta content="https://www.cfoaccounting.co.uk/company-accounts-corporation-tax" property="og:url"/>
+<meta content="https://www.cfoaccounting.co.uk/logo-dark.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Limited Company Accounts &amp; Corporation Tax UK | CFO Accounting" name="twitter:title"/>
+<meta content="Annual accounts and Corporation Tax support for UK limited companies. Keep Companies House and HMRC filings accurate, on time and easier to understand." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#0A1220;
+  --body:#4B5566;
+  --muted:#8A93A3;
+  --bg:#FFFFFF;
+  --bg-alt:#F6F7F9;
+  --border:#E6E9EF;
+  --navy:#0B1E3D;
+  --emerald:#B8863D;
+  --emerald-hover:#9C7130;
+  --emerald-pale:#F6EEDD;
+  --warning:#F59E0B;
+  --warning-pale:#FEF3E2;
+  --font-head:'Manrope', 'Geist Sans', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --shadow-card: 0 20px 40px rgba(10,18,32,0.06);
+  --shadow-hover: 0 24px 48px rgba(10,18,32,0.10);
+  --maxw: 1300px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{
+  font-family:var(--font-body);
+  color:var(--body);
+  background:var(--bg);
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+ul{list-style:none;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
+@media(max-width:900px){.wrap{padding:0 15px;}}
+
+h1,h2,h3,h4{
+  font-family:var(--font-head);
+  color:var(--ink);
+  font-weight:700;
+  letter-spacing:-0.02em;
+  line-height:1.1;
+}
+h1{font-size:clamp(34px, 4.4vw, 54px);line-height:1.08;}
+h2{font-size:clamp(28px, 3.3vw, 42px);line-height:1.15;}
+h3{font-size:clamp(22px, 2.3vw, 28px);line-height:1.2;}
+.body-lg{font-size:clamp(16px, 1.4vw, 18px);}
+.caption{font-size:13px;}
+
+section{padding:120px 0;}
+.section-alt{background:var(--bg-alt);}
+@media(max-width:700px){section{padding:64px 0;}}
+
+.eyebrow{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--emerald);
+  background:var(--emerald-pale);
+  padding:6px 16px;
+  border-radius:999px;
+  margin-bottom:20px;
+}
+.section-head{max-width:640px;margin-bottom:64px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head p{color:var(--body);font-size:19px;margin-top:16px;}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;
+  padding:16px 32px;
+  font-weight:600;
+  font-size:15px;
+  min-height:48px;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--emerald);color:#fff;
+  box-shadow:0 8px 20px rgba(184,134,61,0.28);
+}
+.btn-primary:hover{background:var(--emerald-hover);transform:translateY(-2px);box-shadow:0 14px 28px rgba(184,134,61,0.36);}
+.btn-secondary{
+  border:1.5px solid var(--navy);color:var(--navy);background:transparent;
+}
+.btn-secondary:hover{transform:translateY(-2px);background:var(--navy);color:#fff;}
+.btn-white-outline{border:1.5px solid rgba(255,255,255,0.5);color:#fff;}
+.btn-white-outline:hover{background:#fff;color:var(--navy);transform:translateY(-2px);}
+.btn-sm{padding:12px 24px;font-size:14px;min-height:40px;}
+
+/* ============ HEADER ============ */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:84px;
+}
+.logo{font-family:var(--font-head);font-weight:800;font-size:22px;color:var(--ink);letter-spacing:-0.01em;display:inline-flex;align-items:center;}
+.logo span{color:var(--emerald);}
+nav.main-nav{display:flex;align-items:center;gap:40px;}
+nav.main-nav > ul{display:flex;gap:36px;align-items:center;}
+nav.main-nav > ul > li{position:relative;}
+nav.main-nav > ul > li > a{
+  font-size:15px;font-weight:500;color:var(--ink);
+  display:flex;align-items:center;gap:4px;
+  padding:8px 0;
+}
+nav.main-nav > ul > li > a:hover{color:var(--emerald-hover);}
+nav.main-nav > ul > li > a.active{color:var(--emerald-hover);}
+
+.mega-menu{
+  position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);
+  width:560px;background:#fff;border:1px solid var(--border);border-radius:20px;
+  box-shadow:var(--shadow-hover);
+  padding:32px;
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  opacity:0;visibility:hidden;translate:0 8px;
+  transition:opacity .18s ease, translate .18s ease, visibility .18s;
+}
+li.has-mega:hover .mega-menu{opacity:1;visibility:visible;translate:0 0;}
+.mega-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:16px;font-weight:700;}
+.mega-col a{display:block;font-size:15px;color:var(--ink);padding:8px 0;font-weight:500;}
+.mega-col a:hover{color:var(--emerald-hover);}
+
+.header-right{display:flex;align-items:center;gap:28px;}
+.phone-link{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--ink);}
+.phone-link:hover{color:var(--emerald-hover);}
+.hamburger{display:none;background:none;border:none;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-10px;}
+@media(max-width:1000px){
+  nav.main-nav{display:none;}
+  .header-right .phone-link{display:none;}
+  .header-right .btn-primary{display:none;}
+  .hamburger{display:flex;}
+}
+.mobile-drawer{
+  position:fixed;inset:0;background:#fff;z-index:200;
+  transform:translateX(100%);transition:transform .28s ease;
+  padding:24px;overflow-y:auto;
+}
+.mobile-drawer.open{transform:translateX(0);}
+.mobile-drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;}
+.mobile-drawer-top button{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-10px;}
+body.drawer-open{overflow:hidden;}
+.mobile-drawer ul{display:flex;flex-direction:column;}
+.mobile-drawer li{border-bottom:1px solid var(--border);}
+.mobile-drawer li>a, .mobile-drawer li>span{display:block;padding:18px 4px;font-size:18px;font-weight:600;color:var(--ink);}
+.mobile-drawer li>a.active, .mobile-drawer li>span.active{color:var(--emerald-hover);}
+.mobile-sub{padding-left:16px;display:none;}
+.mobile-sub.open{display:block;}
+.mobile-sub a{font-size:15px;font-weight:500;padding:12px 4px;color:var(--body);}
+.mobile-drawer .btn{width:100%;margin-top:24px;}
+
+/* ============ BREADCRUMB ============ */
+.breadcrumb-strip{padding:24px 0;border-bottom:1px solid var(--border);}
+.breadcrumb-strip .wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.breadcrumb-strip a{font-size:13px;color:var(--muted);font-weight:500;}
+.breadcrumb-strip a:hover{color:var(--emerald-hover);}
+.breadcrumb-strip span.sep{font-size:13px;color:var(--muted);}
+.breadcrumb-strip span.current{font-size:13px;color:var(--ink);font-weight:600;}
+
+/* ============ SERVICE HERO ============ */
+.service-hero{padding:96px 0 100px;}
+.service-hero .wrap{display:grid;grid-template-columns:55fr 45fr;gap:64px;align-items:center;}
+@media(max-width:900px){.service-hero .wrap{grid-template-columns:1fr;gap:28px;}.service-hero{padding:56px 0 64px;}.service-hero .wrap>.reveal:not(.service-hero-img){order:2;}.service-hero-img{order:1;}}
+.service-hero h1{margin-bottom:20px;}
+.service-hero .body-lg{color:var(--body);max-width:540px;margin-bottom:32px;}
+.service-hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+.service-hero-img{position:relative;}
+.service-hero-img img{
+  border-radius:24px;width:100%;height:420px;object-fit:cover;
+  box-shadow:var(--shadow-hover);
+}
+@media(max-width:900px){.service-hero-img img{height:auto;aspect-ratio:4/3;}}
+
+/* ============ PROBLEM CARDS ============ */
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:900px){.problem-grid{grid-template-columns:1fr;}}
+.problem-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 24px;}
+.problem-card .icon-badge{
+  width:48px;height:48px;border-radius:14px;background:var(--warning-pale);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+}
+.problem-card .icon-badge svg{width:24px;height:24px;color:var(--warning);stroke-width:1.5;}
+.problem-card h4{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:8px;font-family:var(--font-head);}
+.problem-card p{font-size:14px;color:var(--body);}
+
+/* ============ CHECK CARDS (What's Included / Why Us) ============ */
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:520px){.checklist{grid-template-columns:1fr;}}
+.checklist.cols-4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:1000px){.checklist.cols-4{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.checklist.cols-4{grid-template-columns:1fr;}}
+.check-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;}
+.check-card svg{width:28px;height:28px;color:var(--emerald);margin-bottom:14px;stroke-width:1.5;}
+.check-card h4{font-size:16px;margin-bottom:6px;font-family:var(--font-head);color:var(--ink);}
+.check-card p{font-size:14px;color:var(--body);}
+
+/* ============ TIMELINE ============ */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;}
+.timeline::before{
+  content:'';position:absolute;top:24px;left:12.5%;right:12.5%;height:1.5px;
+  background-image:linear-gradient(to right, var(--border) 60%, transparent 40%);
+  background-size:16px 1.5px;background-repeat:repeat-x;
+}
+@media(max-width:800px){.timeline{grid-template-columns:1fr;}.timeline::before{display:none;}}
+.tl-step{position:relative;padding-top:0;}
+.tl-num{
+  width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;
+  margin-bottom:24px;position:relative;z-index:2;font-size:15px;
+}
+.tl-step h4{font-size:17px;margin-bottom:8px;font-family:var(--font-head);color:var(--ink);}
+.tl-step p{font-size:14px;color:var(--body);}
+
+/* ============ PRICING SNIPPET ============ */
+.pricing-single{display:flex;justify-content:center;}
+.price-card{
+  background:#fff;border:1px solid var(--border);border-radius:24px;padding:36px 32px;
+  display:flex;flex-direction:column;max-width:400px;width:100%;
+}
+.price-card.popular{border:2px solid var(--emerald);box-shadow:var(--shadow-hover);position:relative;}
+.popular-badge{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:var(--emerald);color:#fff;font-size:12px;font-weight:700;letter-spacing:0.04em;
+  padding:6px 16px;border-radius:999px;text-transform:uppercase;
+}
+.price-card h3{font-family:var(--font-head);margin-bottom:8px;}
+.price-value{font-size:36px;font-weight:800;color:var(--ink);font-family:var(--font-head);margin:16px 0 24px;}
+.price-value span{font-size:15px;color:var(--muted);font-weight:500;}
+.price-card ul{margin-bottom:28px;flex-grow:1;}
+.price-card li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--body);padding:8px 0;}
+.price-card li svg{width:18px;height:18px;color:var(--emerald);flex-shrink:0;margin-top:1px;}
+.pricing-below{text-align:center;margin-top:32px;}
+.pricing-below a{font-weight:600;color:var(--emerald-hover);}
+
+/* ============ FAQ ACCORDION ============ */
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.faq-item{
+  background:#fff;border:1px solid var(--border);border-radius:20px;
+  overflow:hidden;transition:border-color .2s ease, box-shadow .2s ease;
+}
+.faq-item.open{border-color:var(--emerald);box-shadow:var(--shadow-card);}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:24px 28px;text-align:left;cursor:pointer;
+}
+.faq-q h4{font-size:16px;font-family:var(--font-head);color:var(--ink);font-weight:700;}
+.faq-q svg{width:20px;height:20px;color:var(--emerald);flex-shrink:0;transition:transform .25s ease;}
+.faq-item.open .faq-q svg{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-item.open .faq-a{max-height:240px;}
+.faq-a-inner{padding:0 28px 24px;font-size:15px;color:var(--body);}
+
+/* ============ RELATED SERVICES (reused card component) ============ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr;}}
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 24px;
+  transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  display:block;
+}
+.card:hover{border-color:var(--emerald);box-shadow:var(--shadow-hover);transform:translateY(-4px);}
+.card .icon-badge{
+  width:48px;height:48px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+}
+.card .icon-badge svg{width:22px;height:22px;color:var(--emerald);stroke-width:1.6;}
+.card h4{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:8px;font-family:var(--font-head);}
+.card .learn{font-size:14px;font-weight:600;color:var(--emerald-hover);display:inline-flex;align-items:center;gap:4px;margin-top:12px;}
+
+/* ============ FINAL CTA ============ */
+.final-cta-wrap{padding:0 0 120px;}
+@media(max-width:700px){.final-cta-wrap{padding:0 0 64px;}}
+.final-cta{
+  border-radius:32px;
+  background:linear-gradient(120deg, var(--navy) 0%, #0E2A52 55%, var(--emerald-hover) 130%);
+  padding:96px 40px;text-align:center;color:#fff;
+}
+.final-cta h2{color:#fff;margin-bottom:16px;}
+.final-cta p{color:rgba(255,255,255,0.8);font-size:18px;max-width:520px;margin:0 auto 40px;}
+.final-cta-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+@media(max-width:700px){.final-cta{padding:56px 24px;border-radius:24px;}}
+
+/* ============ FOOTER ============ */
+footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:96px 0 40px;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,0.12);}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.footer-grid{grid-template-columns:1fr;}}
+.footer-grid h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:20px;font-family:var(--font-head);}
+.footer-grid li{margin-bottom:12px;}
+.footer-grid a{font-size:14px;color:rgba(255,255,255,0.65);}
+.footer-grid a:hover{color:#fff;}
+.footer-logo{font-family:var(--font-head);font-weight:800;font-size:20px;color:#fff;margin-bottom:16px;display:flex;align-items:center;}
+.footer-logo span{color:var(--emerald);}
+.footer-blurb{font-size:14px;line-height:1.6;margin-bottom:20px;max-width:260px;}
+.social-row{display:flex;gap:12px;}
+.social-row a{
+  width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+}
+.social-row svg{width:16px;height:16px;}
+@media(max-width:700px){.social-row a{width:44px;height:44px;}}
+.footer-bottom{padding-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;}
+@media(max-width:600px){.footer-bottom{flex-direction:column;}}
+
+.reveal{opacity:0;translate:0 24px;transition:opacity .6s ease, translate .6s ease;}
+.reveal.in{opacity:1;translate:0 0;}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;translate:0 0;transition:none;}
+  html{scroll-behavior:auto;}
+}
+:focus-visible{outline:2px solid var(--emerald);outline-offset:3px;}
+</style>
+<!-- Breadcrumb schema -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cfoaccounting.co.uk/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.cfoaccounting.co.uk/services"},{"@type":"ListItem","position":3,"name":"Company Accounts & Corporation Tax","item":"https://www.cfoaccounting.co.uk/company-accounts-corporation-tax"}]}</script>
+<!-- FAQPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When are company accounts and Corporation Tax due?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Statutory accounts are due 9 months after your company year end, and Corporation Tax is due 9 months and 1 day after, though the CT600 return itself has a 12-month filing deadline. We track all of these for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I file late?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Companies House and HMRC both issue automatic penalties for late filing, which increase the longer a return is outstanding. We build in enough lead time to avoid this entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you take over from my current accountant mid-year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We handle the handover directly with your outgoing accountant and can pick up your accounts and tax at any point in your company year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this included in your monthly packages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it's included as standard in our Growth and Scale packages, and available as a standalone annual service otherwise."
+      }
+    }
+  ]
+}
+</script>
+<link href="/site-enhancements.css" rel="stylesheet"/>
+<script data-site-schema="" type="application/ld+json">{"@context":"https://schema.org","@type":"AccountingService","@id":"https://www.cfoaccounting.co.uk/#organisation","name":"CFO Accounting","url":"https://www.cfoaccounting.co.uk/","logo":"https://www.cfoaccounting.co.uk/logo-light.png","email":"consult@cfoaccounting.co.uk","telephone":"+44 77491 597650","areaServed":{"@type":"Country","name":"United Kingdom"},"priceRange":"Fixed-fee packages and tailored quotes"}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ===================== HEADER ===================== -->
+<header>
+<div class="wrap header-inner">
+<a class="logo" href="/"><img alt="CFO Accounting" decoding="async" src="/logo-light.png" style="height:34px;width:auto;display:block;"/></a>
+<nav class="main-nav">
+<ul>
+<li><a href="/">Home</a></li>
+<li class="has-mega">
+<a class="active" href="/services">Services <i data-lucide="chevron-down" style="width:14px;height:14px"></i></a>
+<div class="mega-menu">
+<div class="mega-col">
+<h4>Compliance &amp; Tax</h4>
+<a href="/bookkeeping">Bookkeeping</a>
+<a href="/vat-returns">VAT Returns</a>
+<a href="/self-assessment">Self-Assessment</a>
+<a href="/company-accounts-corporation-tax">Company Accounts</a>
+<a href="/cis-returns">CIS Returns</a>
+<a href="/ecommerce-accounting">E-commerce Accounting</a>
+</div>
+<div class="mega-col">
+<h4>Advisory &amp; Outsourced Finance</h4>
+<a href="/payroll">Payroll</a>
+<a href="/virtual-cfo">Virtual CFO</a>
+<a href="/management-accounts">Management Accounts</a>
+<a href="/capital-gains-property-tax">Capital Gains</a>
+<a href="/company-formation">Company Formation</a>
+<a href="/erp-advisory">ERP Advisory</a>
+<a href="/business-funding">Business Funding &amp; Grants</a>
+</div>
+</div>
+</li>
+<li><a href="/about-us">About Us</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="/insights">Insights</a></li>
+<li><a href="/contact-us">Contact Us</a></li>
+</ul>
+</nav>
+<div class="header-right">
+<a class="phone-link" href="tel:+4477491597650"><i data-lucide="phone" style="width:16px;height:16px"></i> +44 77491 597650</a>
+<a class="btn btn-primary btn-sm" href="/contact-us">Get a Free Consultation</a>
+<button aria-label="Open menu" class="hamburger" id="hamburgerBtn"><i data-lucide="menu" style="width:26px;height:26px"></i></button>
+</div>
+</div>
+</header>
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+<div class="mobile-drawer-top">
+<a class="logo" href="/"><img alt="CFO Accounting" decoding="async" src="/logo-light.png" style="height:34px;width:auto;display:block;"/></a>
+<button aria-label="Close menu" id="closeDrawerBtn"><i data-lucide="x" style="width:26px;height:26px"></i></button>
+</div>
+<ul>
+<li><a href="/">Home</a></li>
+<li>
+<span class="active" id="mobileServicesToggle" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">Services <i data-lucide="chevron-down" style="width:18px;height:18px"></i></span>
+<div class="mobile-sub" id="mobileServicesSub">
+<a href="/bookkeeping">Bookkeeping</a><a href="/vat-returns">VAT Returns</a><a href="/self-assessment">Self-Assessment</a><a href="/company-accounts-corporation-tax">Company Accounts</a><a href="/cis-returns">CIS Returns</a><a href="/payroll">Payroll</a><a href="/virtual-cfo">Virtual CFO</a><a href="/management-accounts">Management Accounts</a><a href="/capital-gains-property-tax">Capital Gains</a><a href="/company-formation">Company Formation</a><a href="/ecommerce-accounting">E-commerce Accounting</a><a href="/erp-advisory">ERP Advisory</a><a href="/business-funding">Business Funding &amp; Grants</a>
+</div>
+</li>
+<li><a href="/about-us">About Us</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="/insights">Insights</a></li>
+<li><a href="/contact-us">Contact Us</a></li>
+</ul>
+<a class="phone-link" href="tel:+4477491597650" style="margin-top:20px;"><i data-lucide="phone" style="width:16px;height:16px"></i> +44 77491 597650</a>
+<a class="btn btn-primary" href="/contact-us">Get a Free Consultation</a>
+</div>
+<!-- ===================== BREADCRUMB ===================== -->
+<div class="breadcrumb-strip">
+<div class="wrap">
+<a href="/">Home</a>
+<span class="sep">/</span>
+<a href="/services">Services</a>
+<span class="sep">/</span>
+<span class="current">Company Accounts &amp; Corporation Tax</span>
+</div>
+</div>
+<!-- ===================== HERO ===================== -->
+<main id="main-content" tabindex="-1">
+<section class="service-hero">
+<div class="wrap">
+<div class="reveal">
+<span class="eyebrow">Compliance &amp; Tax</span>
+<h1>Company accounts and Corporation Tax, handled with less hassle</h1>
+<p class="body-lg">We turn your year-end records into accurate statutory accounts and Corporation Tax filings, while keeping you clear on deadlines, liabilities and the numbers that matter.</p>
+<div class="service-hero-ctas">
+<a class="btn btn-primary" href="/contact-us#contact-form">Get a Free Consultation</a>
+<a class="btn btn-secondary" href="tel:+4477491597650">Call Us</a>
+</div>
+</div>
+<div class="service-hero-img reveal">
+<img alt="Financial dashboard showing company accounts on a laptop screen" decoding="async" fetchpriority="high" src="/assets/images/company-accounts-corporation-tax-accounting-support.webp"/>
+</div>
+</div>
+</section>
+<!-- ===================== THE PROBLEM ===================== -->
+<section class="section-alt">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">The Problem</span>
+<h2>Year-end should give you clarity, not a pile of unfamiliar paperwork</h2>
+</div>
+<div class="problem-grid reveal">
+<div class="problem-card">
+<div class="icon-badge"><i data-lucide="calendar-x"></i></div>
+<h4>Late Filing Penalties</h4>
+<p>Companies House and HMRC both fine you automatically for missed deadlines.</p>
+</div>
+<div class="problem-card">
+<div class="icon-badge"><i data-lucide="circle-alert"></i></div>
+<h4>Incorrect Tax Calculations</h4>
+<p>Miscalculated Corporation Tax means either overpaying or facing HMRC enquiries.</p>
+</div>
+<div class="problem-card">
+<div class="icon-badge"><i data-lucide="file-question"></i></div>
+<h4>Confusing Requirements</h4>
+<p>Statutory accounts, CT600 returns and Companies House filings each have different rules.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== WHAT'S INCLUDED ===================== -->
+<section>
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">What's Included</span>
+<h2>Everything you need, handled in one place</h2>
+</div>
+<div class="checklist cols-4 reveal">
+<div class="check-card"><i data-lucide="building-2"></i><h4>Statutory Accounts Preparation</h4><p>Prepared to full Companies House and HMRC standard.</p></div>
+<div class="check-card"><i data-lucide="calculator"></i><h4>Corporation Tax Calculation</h4><p>Accurate CT600 calculation, including all available reliefs.</p></div>
+<div class="check-card"><i data-lucide="file-check"></i><h4>Companies House Filing</h4><p>Annual accounts and confirmation statement filed on time.</p></div>
+<div class="check-card"><i data-lucide="shield-check"></i><h4>HMRC Submission</h4><p>Corporation Tax return filed digitally and correctly.</p></div>
+<div class="check-card"><i data-lucide="badge-pound-sterling"></i><h4>Tax Planning Review</h4><p>We flag legitimate ways to reduce your Corporation Tax bill.</p></div>
+<div class="check-card"><i data-lucide="clock"></i><h4>Deadline Tracking</h4><p>Every filing date tracked, so nothing is ever missed.</p></div>
+<div class="check-card"><i data-lucide="file-text"></i><h4>Directors' Report Prepared</h4><p>Included as part of your statutory accounts pack.</p></div>
+<div class="check-card"><i data-lucide="user-check"></i><h4>Dedicated Accountant</h4><p>One point of contact for accounts and tax, year-round.</p></div>
+</div>
+</div>
+</section>
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section-alt">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">How It Works</span>
+<h2>A straightforward start, without unnecessary disruption</h2>
+</div>
+<div class="timeline reveal">
+<div class="tl-step"><div class="tl-num">01</div><h4>Free Consultation</h4><p>We review your company structure and current filing history.</p></div>
+<div class="tl-step"><div class="tl-num">02</div><h4>We Review Your Books</h4><p>Your bookkeeping is checked and reconciled before accounts prep.</p></div>
+<div class="tl-step"><div class="tl-num">03</div><h4>We Prepare Your Accounts</h4><p>Statutory accounts and CT600 drafted for your review.</p></div>
+<div class="tl-step"><div class="tl-num">04</div><h4>Filed On Time</h4><p>Submitted to Companies House and HMRC, confirmed to you.</p></div>
+</div>
+</div>
+</section>
+<!-- ===================== PRICING SNIPPET ===================== -->
+<section>
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">Pricing</span>
+<h2>Clear pricing before we begin</h2>
+</div>
+<div class="pricing-single reveal">
+<div class="price-card popular">
+<span class="popular-badge">Most Popular</span>
+<h3>Company Accounts &amp; Corporation Tax</h3>
+<p class="caption">For UK limited companies</p>
+<div class="price-value">From £600<span>/yr</span></div>
+<ul>
+<li><i data-lucide="check"></i> Statutory accounts preparation</li>
+<li><i data-lucide="check"></i> Corporation Tax calculation &amp; filing</li>
+<li><i data-lucide="check"></i> Companies House filing</li>
+<li><i data-lucide="check"></i> Included free in Growth &amp; Scale</li>
+</ul>
+<a class="btn btn-primary" href="/contact-us#contact-form">Get Started</a>
+</div>
+</div>
+<div class="pricing-below reveal"><a href="/contact-us">Get a Custom Quote →</a></div>
+</div>
+</section>
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="section-alt">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">Why CFO Accounting</span>
+<h2>Statutory filings handled with real accuracy, every year</h2>
+</div>
+<div class="checklist reveal">
+<div class="check-card"><i data-lucide="user-check"></i><h4>Dedicated Accountant</h4><p>Speak to one person who understands your business, not a different adviser every time.</p></div>
+<div class="check-card"><i data-lucide="badge-pound-sterling"></i><h4>Fixed Transparent Pricing</h4><p>Know the fee before work begins, so there are no awkward surprises later.</p></div>
+<div class="check-card"><i data-lucide="cloud"></i><h4>Cloud-Based &amp; Real-Time</h4><p>Work from current numbers so decisions are based on what is happening now, not months ago.</p></div>
+<div class="check-card"><i data-lucide="shield-check"></i><h4>UK Accounting &amp; HMRC Support</h4><p>Keep important UK filing dates and compliance tasks under control, with support when questions come up.</p></div>
+</div>
+</div>
+</section>
+<!-- ===================== FAQS ===================== -->
+<section>
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">Common Questions</span>
+<h2>Company Accounts &amp; Corporation Tax FAQs</h2>
+</div>
+<div class="faq-list reveal">
+<div class="faq-item open">
+<button aria-expanded="true" class="faq-q">
+<h4>When are company accounts and Corporation Tax due?</h4>
+<i data-lucide="plus"></i>
+</button>
+<div class="faq-a"><div class="faq-a-inner">Statutory accounts are due 9 months after your company year end, and Corporation Tax is due 9 months and 1 day after, though the CT600 return itself has a 12-month filing deadline. We track all of these for you.</div></div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q">
+<h4>What happens if I file late?</h4>
+<i data-lucide="plus"></i>
+</button>
+<div class="faq-a"><div class="faq-a-inner">Companies House and HMRC both issue automatic penalties for late filing, which increase the longer a return is outstanding. We build in enough lead time to avoid this entirely.</div></div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q">
+<h4>Can you take over from my current accountant mid-year?</h4>
+<i data-lucide="plus"></i>
+</button>
+<div class="faq-a"><div class="faq-a-inner">Yes. We handle the handover directly with your outgoing accountant and can pick up your accounts and tax at any point in your company year.</div></div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-q">
+<h4>Is this included in your monthly packages?</h4>
+<i data-lucide="plus"></i>
+</button>
+<div class="faq-a"><div class="faq-a-inner">Yes, it's included as standard in our Growth and Scale packages, and available as a standalone annual service otherwise.</div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== RELATED SERVICES ===================== -->
+<section class="section-alt">
+<div class="wrap">
+<div class="section-head center reveal">
+<span class="eyebrow">You Might Also Need</span>
+<h2>Related Services</h2>
+</div>
+<div class="services-grid reveal">
+<a class="card" href="/bookkeeping"><div class="service-card-media"><img alt="Bookkeeping and financial records for a UK small business" decoding="async" loading="lazy" src="/assets/images/bookkeeping-accounting-support.webp"/></div>
+<div class="icon-badge"><i data-lucide="book-open"></i></div>
+<h4>Bookkeeping</h4>
+<p class="caption">Keep your records current and know where the money is going.</p>
+<span class="learn">Learn more →</span>
+</a>
+<a class="card" href="/vat-returns"><div class="service-card-media"><img alt="VAT return preparation and bookkeeping records" decoding="async" loading="lazy" src="/assets/images/vat-returns-accounting-support.webp"/></div>
+<div class="icon-badge"><i data-lucide="receipt"></i></div>
+<h4>VAT Returns</h4>
+<p class="caption">Stay on top of VAT without the quarterly rush or guesswork.</p>
+<span class="learn">Learn more →</span>
+</a>
+<a class="card" href="/company-formation"><div class="service-card-media"><img alt="New UK limited company setup and accounting support" decoding="async" loading="lazy" src="/assets/images/company-formation-accounting-support.webp"/></div>
+<div class="icon-badge"><i data-lucide="briefcase"></i></div>
+<h4>Company Formation</h4>
+<p class="caption">Start with the right registrations and accounting setup in place.</p>
+<span class="learn">Learn more →</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ===================== FINAL CTA ===================== -->
+<div class="final-cta-wrap">
+<div class="wrap">
+<div class="final-cta reveal" id="contact">
+<h2>Ready to get started with Company Accounts &amp; Corporation Tax?</h2>
+<p>Tell us what you need. We’ll explain the best next step, with no pressure.</p>
+<div class="final-cta-ctas">
+<a class="btn btn-primary" href="/contact-us">Book Your Free Consultation</a>
+<a class="btn btn-white-outline" href="tel:+4477491597650">Call Us</a>
+</div>
+</div>
+</div>
+</div>
+<!-- ===================== FOOTER ===================== -->
+</main>
+<footer>
+<div class="wrap">
+<div class="footer-intro">
+<div>
+<div class="footer-logo"><img alt="CFO Accounting" decoding="async" height="32" src="/logo-dark.png" width="190"/></div>
+<p>Clear, dependable accounting support for ambitious UK businesses.</p>
+</div>
+<a class="btn btn-primary" href="/contact-us#contact-form">Book a Free Consultation</a>
+</div>
+<div class="footer-grid">
+<div class="footer-contact">
+<h4>Talk to our team</h4>
+<p class="footer-blurb">Bookkeeping, tax, payroll and CFO-level insight, delivered in plain English by an experienced finance team.</p>
+<a href="tel:+4477491597650"><i data-lucide="phone"></i><span>+44 77491 597650</span></a>
+<a href="mailto:consult@cfoaccounting.co.uk"><i data-lucide="mail"></i><span>consult@cfoaccounting.co.uk</span></a>
+</div>
+<div>
+<h4>Accounts &amp; Tax</h4>
+<ul>
+<li><a href="/bookkeeping">Bookkeeping</a></li>
+<li><a href="/vat-returns">VAT Returns</a></li>
+<li><a href="/payroll">Payroll</a></li>
+<li><a href="/self-assessment">Self-Assessment</a></li>
+<li><a href="/company-accounts-corporation-tax">Company Accounts &amp; Tax</a></li>
+<li><a href="/cis-returns">CIS Returns</a></li>
+</ul>
+</div>
+<div>
+<h4>Growth Support</h4>
+<ul>
+<li><a href="/virtual-cfo">Virtual CFO</a></li>
+<li><a href="/management-accounts">Management Accounts</a></li>
+<li><a href="/ecommerce-accounting">E-commerce Accounting</a></li>
+<li><a href="/erp-advisory">ERP Advisory</a></li>
+<li><a href="/business-funding">Funding &amp; Grants</a></li>
+<li><a href="/services">View All Services</a></li>
+</ul>
+</div>
+<div>
+<h4>Company</h4>
+<ul>
+<li><a href="/about-us">About Us</a></li>
+<li><a href="/team">Meet the Team</a></li>
+<li><a href="/faq">FAQs</a></li>
+<li><a href="/insights">Insights</a></li>
+<li><a href="/contact-us">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4>Legal</h4>
+<ul>
+<li><a href="/privacy-policy">Privacy Policy</a></li>
+<li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+<li><a href="/cookie-policy">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 CFO Accounting. All rights reserved.</span>
+<span>UK-wide accounting support for growing businesses</span>
+</div>
+</div>
+</footer>
+<script>
+lucide.createIcons();
+
+// Mobile drawer
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+hamburgerBtn.addEventListener('click', ()=> {
+  mobileDrawer.classList.add('open');
+  document.body.classList.add('drawer-open');
+});
+closeDrawerBtn.addEventListener('click', ()=> {
+  mobileDrawer.classList.remove('open');
+  document.body.classList.remove('drawer-open');
+});
+mobileDrawer.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> {
+  mobileDrawer.classList.remove('open');
+  document.body.classList.remove('drawer-open');
+}));
+
+// Mobile services accordion
+const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+const mobileServicesSub = document.getElementById('mobileServicesSub');
+mobileServicesToggle.addEventListener('click', ()=> mobileServicesSub.classList.toggle('open'));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:0.15});
+revealEls.forEach(el=> io.observe(el));
+</script>
+<script src="/site-config.js"></script>
+<script defer="" src="/site.js"></script>
+</body>
+</html>

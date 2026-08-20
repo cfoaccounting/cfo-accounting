@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/bookkeeping-services", "destination": "/bookkeeping", "permanent": true },
+    { "source": "/company-accounts", "destination": "/company-accounts-corporation-tax", "permanent": true },
+    { "source": "/payroll-services", "destination": "/payroll", "permanent": true },
+    { "source": "/blog/uk-small-business-grants-2026", "destination": "/uk-small-business-grants-2026", "permanent": true },
+    { "source": "/contact", "destination": "/contact-us", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ]
+}
