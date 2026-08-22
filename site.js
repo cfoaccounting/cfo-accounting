@@ -52,6 +52,20 @@
     });
   }
 
+  function setupInsightNavigation() {
+    const toggle = document.getElementById("mobileInsightsToggle");
+    const submenu = document.getElementById("mobileInsightsSub");
+    if (!toggle || !submenu || toggle.dataset.ready === "true") return;
+
+    toggle.dataset.ready = "true";
+    toggle.addEventListener("click", () => {
+      const willOpen = !submenu.classList.contains("open");
+      submenu.classList.toggle("open", willOpen);
+      toggle.setAttribute("aria-expanded", String(willOpen));
+      toggle.setAttribute("aria-label", willOpen ? "Hide Insights pages" : "Show Insights pages");
+    });
+  }
+
   function addWhatsAppButton() {
     if (document.querySelector(".whatsapp-float")) return;
     const link = document.createElement("a");
@@ -123,10 +137,12 @@
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
+      setupInsightNavigation();
       addCookieBanner();
       addWhatsAppButton();
     });
   } else {
+    setupInsightNavigation();
     addCookieBanner();
     addWhatsAppButton();
   }

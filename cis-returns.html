@@ -337,7 +337,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:96px 0 40px;}
 .footer-bottom{padding-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;}
 @media(max-width:600px){.footer-bottom{flex-direction:column;}}
 
-.reveal{opacity:0;translate:0 24px;transition:opacity .6s ease, translate .6s ease;}
+.reveal{opacity:1;translate:0 0;transition:none;}
 .reveal.in{opacity:1;translate:0 0;}
 @media (prefers-reduced-motion: reduce){
   .reveal{opacity:1;translate:0 0;transition:none;}
@@ -427,7 +427,21 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:96px 0 40px;}
 </li>
 <li><a href="/about-us">About Us</a></li>
 <li><a href="/faq">FAQ</a></li>
-<li><a href="/insights">Insights</a></li>
+<li class="has-mega insights-menu">
+<a href="/insights">Insights <i data-lucide="chevron-down" style="width:14px;height:14px"></i></a>
+<div class="mega-menu insights-mega">
+<div class="mega-col">
+<h4>Insights &amp; Guides</h4>
+<a href="/making-tax-digital-income-tax">MTD Income Tax Guide</a>
+<a href="/mtd-income-tax-threshold-checker">MTD Threshold Checker</a>
+<a href="/mtd-quarterly-updates-explained">MTD Quarterly Updates</a>
+<a href="/mtd-income-tax-landlords">MTD for Landlords</a>
+<a href="/uk-small-business-grants-2026">UK Small Business Grants 2026</a>
+<a href="/faq">Accounting FAQs</a>
+<a class="insights-view-all" href="/insights">View All Insights</a>
+</div>
+</div>
+</li>
 <li><a href="/contact-us">Contact Us</a></li>
 </ul>
 </nav>
@@ -454,7 +468,21 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:96px 0 40px;}
 </li>
 <li><a href="/about-us">About Us</a></li>
 <li><a href="/faq">FAQ</a></li>
-<li><a href="/insights">Insights</a></li>
+<li class="mobile-has-sub">
+<div class="mobile-menu-row">
+<a href="/insights">Insights</a>
+<button type="button" class="mobile-sub-toggle" id="mobileInsightsToggle" aria-expanded="false" aria-controls="mobileInsightsSub" aria-label="Show Insights pages"><i data-lucide="chevron-down" style="width:18px;height:18px"></i></button>
+</div>
+<div class="mobile-sub" id="mobileInsightsSub">
+<a href="/making-tax-digital-income-tax">MTD Income Tax Guide</a>
+<a href="/mtd-income-tax-threshold-checker">MTD Threshold Checker</a>
+<a href="/mtd-quarterly-updates-explained">MTD Quarterly Updates</a>
+<a href="/mtd-income-tax-landlords">MTD for Landlords</a>
+<a href="/uk-small-business-grants-2026">UK Small Business Grants 2026</a>
+<a href="/faq">Accounting FAQs</a>
+<a href="/insights"><strong>View All Insights</strong></a>
+</div>
+</li>
 <li><a href="/contact-us">Contact Us</a></li>
 </ul>
 <a class="phone-link" href="tel:+4477491597650" style="margin-top:20px;"><i data-lucide="phone" style="width:16px;height:16px"></i> +44 77491 597650</a>
@@ -696,39 +724,54 @@ footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:96px 0 40px;}
 <li><a href="/self-assessment">Self-Assessment</a></li>
 <li><a href="/making-tax-digital-income-tax">Making Tax Digital</a></li>
 <li><a href="/company-accounts-corporation-tax">Company Accounts &amp; Tax</a></li>
+<li><a href="/financial-statement-preparation">Financial Statements</a></li>
 <li><a href="/cis-returns">CIS Returns</a></li>
+<li><a href="/ecommerce-accounting">E-commerce Accounting</a></li>
 </ul>
 </div>
 <div>
-<h4>Growth Support</h4>
+<h4>Advisory &amp; Growth</h4>
 <ul>
 <li><a href="/virtual-cfo">Virtual CFO</a></li>
 <li><a href="/management-accounts">Management Accounts</a></li>
-<li><a href="/ecommerce-accounting">E-commerce Accounting</a></li>
 <li><a href="/erp-advisory">ERP Advisory</a></li>
-<li><a href="/business-funding">Funding &amp; Grants</a></li>
-<li><a href="/services">View All Services</a></li>
+<li><a href="/capital-gains-property-tax">Capital Gains &amp; Property Tax</a></li>
+<li><a href="/company-formation">Company Formation</a></li>
+<li><a href="/business-funding">Business Funding</a></li>
+<li><a href="/business-valuation">Business Valuation</a></li>
+<li><a href="/government-grants">Government Grants</a></li>
+<li><a href="/rd-tax-credits">R&amp;D Tax Credits</a></li>
+</ul>
+</div>
+<div>
+<h4>Insights &amp; Guides</h4>
+<ul>
+<li><a href="/insights">All Insights</a></li>
+<li><a href="/making-tax-digital-income-tax">MTD Income Tax Guide</a></li>
+<li><a href="/mtd-income-tax-threshold-checker">MTD Threshold Checker</a></li>
+<li><a href="/mtd-quarterly-updates-explained">MTD Quarterly Updates</a></li>
+<li><a href="/mtd-income-tax-landlords">MTD for Landlords</a></li>
+<li><a href="/uk-small-business-grants-2026">Small Business Grants 2026</a></li>
+<li><a href="/faq">Accounting FAQs</a></li>
 </ul>
 </div>
 <div>
 <h4>Company</h4>
 <ul>
+<li><a href="/">Home</a></li>
 <li><a href="/about-us">About Us</a></li>
 <li><a href="/team">Meet the Team</a></li>
-<li><a href="/faq">FAQs</a></li>
-<li><a href="/insights">Insights</a></li>
+<li><a href="/services">All Services</a></li>
 <li><a href="/contact-us">Contact Us</a></li>
 </ul>
 </div>
-<div>
-<h4>Legal</h4>
-<ul>
-<li><a href="/privacy-policy">Privacy Policy</a></li>
-<li><a href="/terms-conditions">Terms &amp; Conditions</a></li>
-<li><a href="/cookie-policy">Cookie Policy</a></li>
-</ul>
 </div>
-</div>
+<nav class="footer-legal-row" aria-label="Legal links">
+<span>Legal</span>
+<a href="/privacy-policy">Privacy Policy</a>
+<a href="/terms-conditions">Terms &amp; Conditions</a>
+<a href="/cookie-policy">Cookie Policy</a>
+</nav>
 <div class="footer-bottom">
 <span>© 2026 CFO Accounting. All rights reserved.</span>
 <span>UK-wide accounting support for growing businesses</span>
@@ -776,17 +819,6 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
   });
 });
 
-// Scroll reveal
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('in');
-      io.unobserve(entry.target);
-    }
-  });
-},{threshold:0.15});
-revealEls.forEach(el=> io.observe(el));
 </script>
 <script src="/site-config.js"></script>
 <script defer="" src="/site.js"></script>

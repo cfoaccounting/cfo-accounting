@@ -607,3 +607,120 @@ footer{padding-top:58px!important;}
 .checker-result.clear{background:#edf8f1;border:1px solid #b9dfc8;}
 .checker-result.neutral{background:#f5f7fa;border:1px solid var(--border);}
 @media(max-width:700px){.checker-grid{grid-template-columns:1fr;}.mtd-checker{padding:22px 18px;}.mtd-table{display:block;overflow-x:auto;white-space:normal;}.mtd-table th,.mtd-table td{min-width:150px;}}
+
+/* ========================================================================== 
+   22 Aug 2026 — instant content, Insights navigation and expanded footer
+   ========================================================================== */
+
+/* Content should be visible on first paint. No scroll/fade reveal delay. */
+.reveal,
+.reveal.in{
+  opacity:1!important;
+  translate:0 0!important;
+  transform:none!important;
+  transition:none!important;
+  animation:none!important;
+}
+
+/* Keep mega menus usable with mouse and keyboard. */
+li.has-mega:focus-within > .mega-menu{
+  opacity:1;
+  visibility:visible;
+  translate:0 0;
+}
+.insights-menu .insights-mega{
+  width:390px;
+  grid-template-columns:1fr;
+  padding:24px 26px;
+  gap:0;
+}
+.insights-menu .insights-mega .mega-col h4{margin-bottom:10px;}
+.insights-menu .insights-mega .mega-col a{
+  padding:9px 0;
+  line-height:1.35;
+}
+.insights-menu .insights-mega .insights-view-all{
+  margin-top:8px;
+  padding-top:15px;
+  border-top:1px solid var(--border);
+  color:var(--emerald-hover);
+  font-weight:700;
+}
+
+/* Mobile Insights: the label navigates, the chevron independently expands. */
+.mobile-menu-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.mobile-menu-row > a{
+  flex:1;
+  padding:18px 4px;
+  font-size:18px;
+  font-weight:600;
+  color:var(--ink);
+}
+.mobile-sub-toggle{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  display:grid;
+  place-items:center;
+  border:0;
+  border-radius:10px;
+  background:transparent;
+  color:var(--ink);
+  cursor:pointer;
+}
+.mobile-sub-toggle:hover{background:var(--bg-alt);}
+.mobile-sub-toggle svg{transition:transform .18s ease;}
+.mobile-sub-toggle[aria-expanded="true"] svg{transform:rotate(180deg);}
+.mobile-has-sub .mobile-sub{padding-bottom:8px;}
+.mobile-has-sub .mobile-sub a{display:block;}
+
+/* Footer: primary site destinations stay in the main grid; legal links sit
+   in a quiet row directly above the copyright area. */
+.footer-grid{
+  grid-template-columns:1.35fr 1fr 1.12fr 1.08fr .78fr!important;
+  gap:30px!important;
+  border-bottom:0!important;
+  padding-bottom:38px!important;
+}
+.footer-legal-row{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px 24px;
+  padding:18px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.footer-legal-row span{
+  color:var(--brand-gold-bright);
+  font-size:11px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.footer-legal-row a{
+  color:rgba(255,255,255,.62);
+  font-size:12.5px;
+  line-height:1.4;
+}
+.footer-legal-row a:hover{color:#fff;}
+.footer-bottom{padding-top:20px!important;}
+
+@media(max-width:1050px){
+  .footer-grid{grid-template-columns:1.25fr 1fr 1fr!important;}
+}
+@media(max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr!important;}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr!important;gap:26px!important;}
+  .footer-legal-row{gap:9px 18px;padding:18px 0;}
+  .footer-legal-row span{width:100%;margin-bottom:2px;}
+}
+.mobile-menu-row > a.active{color:var(--emerald-hover);}
