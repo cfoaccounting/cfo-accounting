@@ -1,0 +1,20 @@
+# CFO Accounting
+
+CFO Accounting provides bookkeeping, tax, payroll and outsourced finance support for UK small businesses.
+
+## Making Tax Digital for Income Tax
+- https://www.cfoaccounting.co.uk/making-tax-digital-income-tax — evergreen MTD Income Tax guide, thresholds, qualifying income, software and exemptions
+- https://www.cfoaccounting.co.uk/mtd-income-tax-threshold-checker — client-side MTD threshold checker
+- https://www.cfoaccounting.co.uk/mtd-quarterly-updates-explained — quarterly update deadlines and filing explanation
+- https://www.cfoaccounting.co.uk/mtd-income-tax-landlords — MTD guidance for landlords and rental income
+
+## Core services
+- https://www.cfoaccounting.co.uk/bookkeeping
+- https://www.cfoaccounting.co.uk/self-assessment
+- https://www.cfoaccounting.co.uk/vat-returns
+- https://www.cfoaccounting.co.uk/company-accounts-corporation-tax
+- https://www.cfoaccounting.co.uk/payroll
+- https://www.cfoaccounting.co.uk/virtual-cfo
+
+## Notes
+MTD tax content was last reviewed against GOV.UK on 22 August 2026. Tax rules can change; readers should verify current HMRC guidance before acting.
